@@ -25,7 +25,7 @@
     .container-fluid {
         z-index: 5;
         margin-left: 0;
-        background: linear-gradient(#191414, #9e0b0b);
+        background: $color-barra;
         ;
         width: 100%;
     }
@@ -87,6 +87,15 @@
     .form-contain__input {
         width: 500px;
         margin-top: 15px;
+    }
+
+    /*footer*/
+    .pie-img {
+        img{
+
+            width: 100px;
+            height: 100px;
+        }
     }
 }
 

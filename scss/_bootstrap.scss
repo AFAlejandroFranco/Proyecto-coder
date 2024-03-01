@@ -19,12 +19,12 @@
 
 .nav-item {
     a {
-        color: #fff;
+        color:$color-fonts;
         margin: 0 20px;
 
         &:hover {
 
-            color: #ed2323;
+            color: $color-hover;
 
         }
     }
@@ -47,7 +47,7 @@
 }
 
 .icon {
-    color: #fff;
+    color:$color-fonts;
 }
 
 .container-fluid {
@@ -88,7 +88,7 @@ button {
             width: 0;
             height: 3px;
             border-radius: 5px;
-            background-color: #ed2323;
+            background-color: $color-hover;
             opacity: 0;
             transition: 1s;
             

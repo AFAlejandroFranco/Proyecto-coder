@@ -4,13 +4,13 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-general;
 
 }
 
 body {
-    background: linear-gradient(#9e0b0b, #191414);
-    color: #fff;
+    background:$color-fondo;
+    color:$color-fonts;
     background-repeat: no-repeat;
     background-size: contain;
 }
