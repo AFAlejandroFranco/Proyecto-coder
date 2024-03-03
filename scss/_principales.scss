@@ -3,19 +3,22 @@
 .main-index {
     h1 {
 
+
         font-size: 50px;
         font-weight: 500;
-        text-align: center;
+        text-align: map-get($align-medidas, centro );
         margin: 20px;
     }
 }
 
 .contain-main {
-    width: 100%;
-    display: flex;
+    @include medidas(100%, none);
+    
+    @include flex(none, none, none);
+    
 
     p {
-        width: 50%;
+        @include medidas(50%, none);
         padding: 20px 50px;
         border-radius: 10px;
         font-size: 20px;
@@ -44,8 +47,8 @@
     justify-content: center;
 
     article {
-        display: flex;
-        flex-direction: column;
+        @include flex(column, none, none);
+        
     }
 }
 
@@ -66,8 +69,8 @@
     }
 
     img {
-        width: 100%;
-        height: 100%;
+        @include medidas(100%, 100%);
+       
         object-fit: cover;
         border-radius: 15px;
         border: 3px solid #000;
@@ -75,8 +78,8 @@
 }
 
 .ofertas-contain {
-    width: 90%;
-    height: auto;
+    @include medidas(90%, auto);
+    
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -132,9 +135,9 @@
 
 .row {
     img{
-        
+        @include medidas(300px, none);
+
         padding: 5px;
-        width: 300px;
     }
 
 }
@@ -156,36 +159,37 @@ section {
 }
 
 .form-contain {
-    width: 100%;
+    @include medidas(100%, none);
+
+    @include flex(row, center, none);
+
     margin: 100px auto;
-    display: flex;
-    justify-content: center;
+    
 }
 
 .form {
-    width: 700px;
-    height: 300px;
-    display: flex;
+    @include medidas(700px, 300px);
+
+    @include flex(row, space-between, none);
+    
     box-shadow: -5px 5px 10px rgb(226, 143, 71);
     border-radius: 10px;
-    justify-content: space-between;
     padding: 15px;
     background: linear-gradient(160deg, #cb0e0e, #fc9934);
 }
 
 .form-contain__input {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 50%;
+    @include medidas(50%, none);
+
+    @include flex(column, space-evenly, none);
+
     gap: 10px;
 }
 
 .form-contain__input {
     input{
+        @include medidas(100%, 30px);
         
-        width: 100%;
-        height: 30px;
         outline: none;
         font-weight: 600;
         font-size: 15px;
@@ -198,7 +202,8 @@ section {
         }
     }
     .buttom {
-        width: 50%;
+        @include medidas(50%, none);
+        
         background: linear-gradient(45deg, #f6e33e, #e0391c);
         cursor: pointer;
         align-self: center;

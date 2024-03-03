@@ -24,7 +24,7 @@
 
     .container-fluid {
         z-index: 5;
-        margin-left: 0;
+        margin-left: map-get($align-medidas, cero );
         background: $color-barra;
         ;
         width: 100%;
@@ -34,8 +34,8 @@
         .logo {
             img {
 
-                width: 80px;
-                height: 80px;
+                @include medidas(80px, 80px);
+                
             }
         }
     }
@@ -54,7 +54,7 @@
     }
 
     .contain-main__img {
-        align-self: center;
+        align-self: map-get($align-medidas, centro );
 
     }
 
@@ -79,22 +79,23 @@
 
     /*trabaja con nosotros*/
     .form {
-        width: auto;
-        height: auto;
+        @include medidas(auto, auto);
+        
         flex-direction: column-reverse;
     }
 
     .form-contain__input {
-        width: 500px;
+        @include medidas(500px, none);
+
         margin-top: 15px;
     }
 
     /*footer*/
     .pie-img {
         img{
+            @include medidas(100px, 100px);
 
-            width: 100px;
-            height: 100px;
+            
         }
     }
 }
@@ -154,11 +155,12 @@
     /*trabaja con nosotros*/
 
     .form-contain__input {
-        width: 100%;
+        @include medidas(100%, none);
+        
     }
 
     .form {
-        margin: 0;
+        margin: map-get($align-medidas, cero );
     }
 
 }

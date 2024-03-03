@@ -1,14 +1,14 @@
 /* cambio de propiedades de bootstrap*/
 
 .navbar-collapse {
-    flex-grow: 0;
+    flex-grow: map-get($align-medidas, cero );
 }
 
 .navbar {
     width: 100%;
     height: 100px;
-    padding: 0;
-    margin: 0;
+    padding: map-get($align-medidas, cero );
+    margin: map-get($align-medidas, cero );
 }
 
 .navbar-nav {
@@ -34,14 +34,14 @@
 
 
 .nav-img {
-    align-self: center;
+    align-self: map-get($align-medidas, centro );
 }
 
 .nav-img {
     .logo {
         img {
-            width: 150px;
-            height: 150px;
+            @include medidas(150px, 150px);
+           
         }
     }
 }
@@ -51,15 +51,15 @@
 }
 
 .container-fluid {
-    width: 80%;
+    @include medidas(80%, none);
 }
 
 button {
     border: 0 solid transparent;
-    border-radius: 0;
+    border-radius: map-get($align-medidas, cero );
     position: absolute;
     z-index: 10;
-    right: 0;
+    right: map-get($align-medidas, cero );
     top: 18px;
 
 }
@@ -81,21 +81,23 @@ button {
 
         
         &::before {
+            @include medidas(0, 3px);
+
             content: "";
             position: absolute;
             box-sizing: border-box;
+
             bottom: 5px;
-            width: 0;
-            height: 3px;
             border-radius: 5px;
             background-color: $color-hover;
-            opacity: 0;
+            opacity: map-get($align-medidas, cero );
             transition: 1s;
             
         }
         &:hover{
             &::before{
-            width: 90%;
+                @include medidas(90%, none);
+            
             opacity: 1;
             }
         }

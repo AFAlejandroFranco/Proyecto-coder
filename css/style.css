@@ -62,6 +62,7 @@ a img {
 
 .container-fluid {
   width: 80%;
+  height: none;
 }
 
 button {
@@ -84,12 +85,12 @@ button {
   position: relative;
 }
 .nav-item a::before {
+  width: 0;
+  height: 3px;
   content: "";
   position: absolute;
   box-sizing: border-box;
   bottom: 5px;
-  width: 0;
-  height: 3px;
   border-radius: 5px;
   background-color: #ed2323;
   opacity: 0;
@@ -97,6 +98,7 @@ button {
 }
 .nav-item a:hover::before {
   width: 90%;
+  height: none;
   opacity: 1;
 }
 
@@ -105,15 +107,18 @@ button {
   width: 100%;
   height: 150px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: none;
 }
 
 .pie-ul {
   width: 100px;
   height: 50px;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  align-self: flex-end;
+  align-items: flex-end;
 }
 
 .pie-img img {
@@ -131,6 +136,7 @@ button {
 
 .pie-index {
   width: 130px;
+  height: none;
 }
 
 /*index*/
@@ -143,10 +149,15 @@ button {
 
 .contain-main {
   width: 100%;
+  height: none;
   display: flex;
+  flex-direction: none;
+  justify-content: none;
+  align-items: none;
 }
 .contain-main p {
   width: 50%;
+  height: none;
   padding: 20px 50px;
   border-radius: 10px;
   font-size: 20px;
@@ -168,6 +179,8 @@ button {
 .grid-contain article {
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  align-items: none;
 }
 
 /*ofertas*/
@@ -232,8 +245,9 @@ button {
 
 /*quienes somos*/
 .row img {
-  padding: 5px;
   width: 300px;
+  height: none;
+  padding: 5px;
 }
 
 /*style de trabaja con nosotros*/
@@ -245,27 +259,34 @@ section h1 {
 
 .form-contain {
   width: 100%;
-  margin: 100px auto;
+  height: none;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: none;
+  margin: 100px auto;
 }
 
 .form {
   width: 700px;
   height: 300px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
   box-shadow: -5px 5px 10px rgb(226, 143, 71);
   border-radius: 10px;
-  justify-content: space-between;
   padding: 15px;
   background: linear-gradient(160deg, #cb0e0e, #fc9934);
 }
 
 .form-contain__input {
+  width: 50%;
+  height: none;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 50%;
+  align-items: none;
   gap: 10px;
 }
 
@@ -284,6 +305,7 @@ section h1 {
 }
 .form-contain__input .buttom {
   width: 50%;
+  height: none;
   background: linear-gradient(45deg, #f6e33e, #e0391c);
   cursor: pointer;
   align-self: center;
@@ -361,6 +383,7 @@ section h1 {
   }
   .form-contain__input {
     width: 500px;
+    height: none;
     margin-top: 15px;
   }
   /*footer*/
@@ -401,6 +424,7 @@ section h1 {
   /*trabaja con nosotros*/
   .form-contain__input {
     width: 100%;
+    height: none;
   }
   .form {
     margin: 0;
