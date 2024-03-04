@@ -3,7 +3,7 @@
 .pie-contain {
     @include medidas(100%, 150px);
 
-    @include flex(row, space-between, none);
+    @include flex(row, space-between, flex-end);
 
     
 }
@@ -11,7 +11,7 @@
 .pie-ul {
     @include medidas(100px, 50px);
 
-    @include flex(row, space-evenly, flex-end);
+    @include flex(row, space-evenly, center);
 
 }
 
@@ -21,8 +21,27 @@
 
         object-fit: cover;
         position: fixed;
-        bottom: 0;
-        right: 0;
+        bottom: map-get($align-medidas, cero );
+        right: map-get($align-medidas, cero );
+
+        animation-name: girar;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 5s;
+    }
+    @keyframes girar {
+        10%{
+            transform: rotatey(90deg);
+        }
+        50%{
+            transform: rotateY(180deg);
+        }
+        100%{
+            transform: rotatey(360deg);
+        }
+
+
+        
     }
 
 }

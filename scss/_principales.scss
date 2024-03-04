@@ -22,7 +22,7 @@
         padding: 20px 50px;
         border-radius: 10px;
         font-size: 20px;
-        align-self: center;
+        align-self: map-get($align-medidas, centro );
 
     }
 
@@ -44,7 +44,7 @@
     grid-template-rows: repeat(3, 100px);
     gap: 200px;
     grid-auto-flow: row;
-    justify-content: center;
+    justify-content: map-get($align-medidas, centro );
 
     article {
         @include flex(column, none, none);
@@ -102,8 +102,8 @@
 
     div {
         padding: 0 10px 5px 0;
-        bottom: 0;
-        right: 0;
+        bottom: map-get($align-medidas, cero );
+        right: map-get($align-medidas, cero );
     }
 }
 
@@ -111,7 +111,7 @@
 .tercera__texto {
     p {
 
-        margin: 0;
+        margin: map-get($align-medidas, cero );
     }
 }
 
@@ -121,8 +121,8 @@
 
     div {
         padding: 0 10px 5px 0;
-        bottom: 0;
-        right: 0;
+        bottom: map-get($align-medidas, cero);
+        right: map-get($align-medidas, cero );
     }
 }
 
@@ -152,7 +152,7 @@
 section {
     h1{
 
-        text-align: center;
+        text-align: map-get($align-medidas, centro );
         margin: 50px auto;
         padding: 15px 2px;
     }
