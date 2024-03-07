@@ -203,7 +203,6 @@ button {
   position: relative;
 }
 .oferta div {
-  font-family: "Rubik", sans-serif;
   position: absolute;
   color: #fff;
 }
@@ -258,6 +257,10 @@ button {
   right: 0;
 }
 
+.oferta__fonts {
+  font-family: "Rubik";
+}
+
 /*quienes somos*/
 .row img {
   width: 300px;
@@ -265,8 +268,12 @@ button {
   padding: 5px;
 }
 
+.text {
+  padding: 4px;
+}
+
 /*style de trabaja con nosotros*/
-section h1 {
+main h1 {
   text-align: center;
   margin: 50px auto;
   padding: 15px 2px;
@@ -414,6 +421,9 @@ section h1 {
     grid-column: 1/5;
     grid-row: 1/3;
   }
+  .oferta-principal div {
+    padding: 50px;
+  }
   .oferta-segunda {
     grid-column: 1/5;
     grid-row: 3/4;
@@ -425,6 +435,8 @@ section h1 {
   .oferta-segunda div,
   .oferta-tercera div {
     color: #000;
+    font-weight: 800;
+    bottom: 25%;
   }
 }
 /*movile*/
