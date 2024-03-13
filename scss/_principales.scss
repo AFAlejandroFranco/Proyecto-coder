@@ -6,23 +6,23 @@
 
         font-size: 50px;
         font-weight: 500;
-        text-align: map-get($align-medidas, centro );
+        text-align: map-get($align-medidas, centro);
         margin: 20px;
     }
 }
 
 .contain-main {
     @include medidas(100%, none);
-    
+
     @include flex(none, none, none);
-    
+
 
     p {
         @include medidas(50%, none);
         padding: 20px 50px;
         border-radius: 10px;
         font-size: 20px;
-        align-self: map-get($align-medidas, centro );
+        align-self: map-get($align-medidas, centro);
 
     }
 
@@ -44,11 +44,11 @@
     grid-template-rows: repeat(3, 100px);
     gap: 200px;
     grid-auto-flow: row;
-    justify-content: map-get($align-medidas, centro );
+    justify-content: map-get($align-medidas, centro);
 
     article {
         @include flex(column, none, none);
-        
+
     }
 }
 
@@ -66,10 +66,10 @@
         position: absolute;
         color: $color-fonts;
     }
-    
+
     img {
         @include medidas(100%, 100%);
-        
+
         object-fit: cover;
         border-radius: 15px;
         border: 3px solid #000;
@@ -78,7 +78,7 @@
 
 .ofertas-contain {
     @include medidas(90%, auto);
-    
+
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -89,7 +89,7 @@
 .oferta-principal {
     grid-column: 1/5;
     grid-row: 1/3;
-    
+
     div {
         padding: 100px;
     }
@@ -98,36 +98,36 @@
 .oferta-segunda {
     grid-column: 1/3;
     grid-row: 3/5;
-    
+
     div {
         padding: 0 10px 5px 0;
-        bottom: map-get($align-medidas, cero );
-        right: map-get($align-medidas, cero );
+        bottom: map-get($align-medidas, cero);
+        right: map-get($align-medidas, cero);
     }
 }
 
 .segunda__texto,
 .tercera__texto {
     p {
-        
-        margin: map-get($align-medidas, cero );
+
+        margin: map-get($align-medidas, cero);
     }
 }
 
 .oferta-tercera {
     grid-column: 3/5;
     grid-row: 3/5;
-    
+
     div {
         padding: 0 10px 5px 0;
         bottom: map-get($align-medidas, cero);
-        right: map-get($align-medidas, cero );
+        right: map-get($align-medidas, cero);
     }
 }
 
-.oferta__fonts{
+.oferta__fonts {
     font-family: $font-oferta;
-    
+
 }
 
 
@@ -138,7 +138,7 @@
 /*quienes somos*/
 
 .row {
-    img{
+    img {
         @include medidas(300px, none);
 
         padding: 5px;
@@ -146,7 +146,7 @@
 
 }
 
-.text{
+.text {
     padding: 4px;
 }
 
@@ -158,75 +158,84 @@
 /*style de trabaja con nosotros*/
 
 main {
-    h1{
+    h1 {
 
-        text-align: map-get($align-medidas, centro );
+        text-align: map-get($align-medidas, centro);
         margin: 50px auto;
         padding: 15px 2px;
     }
 }
 
-.form-contain {
+.form {
     @include medidas(100%, none);
 
     @include flex(row, center, none);
 
     margin: 100px auto;
-    
+
 }
 
-.form {
+.form-contain {
     @include medidas(700px, 300px);
 
     @include flex(row, space-between, none);
-    
+
     box-shadow: -5px 5px 10px rgb(226, 143, 71);
     border-radius: 10px;
     padding: 15px;
     background: linear-gradient(160deg, #cb0e0e, #fc9934);
 }
 
-.form-contain__input {
+.form-contain__contain {
     @include medidas(50%, none);
 
     @include flex(column, space-evenly, none);
 
     gap: 10px;
-}
 
-.form-contain__input {
-    input{
+    input {
         @include medidas(100%, 30px);
-        
+
         outline: none;
         font-weight: 600;
         font-size: 15px;
         border: none;
         border-radius: 5px;
         background: rgb(201, 226, 239);
-        &:hover{
-            
+
+        &:hover {
+
             background: rgb(243, 245, 246);
         }
     }
+
+
     .buttom {
         @include medidas(50%, none);
-        
+
         background: linear-gradient(45deg, #f6e33e, #e0391c);
         cursor: pointer;
         align-self: center;
+
         &:hover {
             background: #f90c0c70;
-        
+
         }
     }
 }
 
+.form-contain__input-label {
+    position: relative;
 
+    label {
+        position: absolute;
+        left: 3px;
+        color: #000;
+    }
 
-.form {
-    textarea{
-
+    textarea {
+        width: 100%;
+        height: 100px;
         outline: none;
         resize: none;
         font-weight: 600;
@@ -234,17 +243,23 @@ main {
         border: none;
         border-radius: 5px;
         background: rgb(201, 226, 239);
-        &:hover{
+
+        &:hover {
 
             background: rgb(243, 245, 246);
         }
     }
 }
 
+.form-contain__input:not(:placeholder-shown) + .form-contain__label{
+  transform:scale(0);
+  
+}
 
 
 .form-contain__img {
     align-self: center;
+
     img {
         border-radius: 10px;
     }

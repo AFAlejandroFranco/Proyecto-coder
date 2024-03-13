@@ -30,8 +30,8 @@
                 </div>
 
                 <div class="nav-img">
-                    <a class="navbar-brad logo" href="../index.html"> <img class="animate__animated animate__flip" src="../assets/img/logo.png" alt="logo"
-                            title="logo de la marca">
+                    <a class="navbar-brad logo" href="../index.html"> <img class="animate__animated animate__flip"
+                            src="../assets/img/logo.png" alt="logo" title="logo de la marca">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="mi-menu">
@@ -53,13 +53,27 @@
     <main>
         <h1>Te estamos esperando, para forma parte de esta gran FAMILIA!!!</h1>
         <section>
-            <div class="form-contain">
-                <form action="" class="form">
-                    <div class="form-contain__input">
-                        <input type="text" name="Nombre" placeholder="Nombre/s"  required>
-                        <input type="text" name="Apellodo" placeholder="Apellido/s" required>
-                        <input type="email" name="Mail" placeholder="Email" required>
-                        <textarea name="textarea" rows="10" cols="20" placeholder="Contanos porque queres formar parte de nuestro equipo..." required></textarea>
+            <div class="form">
+                <form action="" class="form-contain">
+
+                    <div class="form-contain__contain">
+                        <div class="form-contain__input-label">
+                            <input type="text" name="Nombre" id="Nombre" placeholder="" class="form-contain__input">
+                            <label for="Nombre" class="form-contain__label" >Nombre</label>
+                        </div>
+                        <div class="form-contain__input-label">
+                            <input type="text" name="Apellodo" id="Apellido" placeholder="" class="form-contain__input">
+                            <label for="Apellido" class="form-contain__label" >Apellido</label>
+                        </div>
+                        <div class="form-contain__input-label">
+                            <input type="email" name="Email" id="Email" placeholder="" class="form-contain__input">
+                            <label for="Email" class="form-contain__label" >Email</label>
+                        </div>
+                        <div class="form-contain__input-label">
+                            <textarea name="textarea" rows="10" cols="20" id="Descripcion" placeholder=""
+                                class="form-contain__input"></textarea>
+                            <label for="Descripcion" class="form-contain__label" >Contanos porque queres ser parte de este gran equipo!!</label>
+                        </div>
                         <input type="submit" value="enviar" class="buttom">
                     </div>
                     <!--la imagen del form tiene que ser de empleados realizando alguna tarea y se los tiene que notar felices-->
