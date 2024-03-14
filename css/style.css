@@ -411,12 +411,12 @@ main h1 {
     order: 5;
   }
   /*trabaja con nosotros*/
-  .form {
+  .form-contain {
     width: auto;
     height: auto;
     flex-direction: column-reverse;
   }
-  .form-contain__input {
+  .form-contain__input-label {
     width: 500px;
     height: none;
     margin-top: 15px;
@@ -447,9 +447,9 @@ main h1 {
   }
   .oferta-segunda div,
   .oferta-tercera div {
-    color: #000;
+    color: #0a143f;
     font-weight: 800;
-    bottom: 25%;
+    bottom: 10%;
   }
 }
 /*movile*/
@@ -462,11 +462,17 @@ main h1 {
     max-width: 400px;
   }
   /*trabaja con nosotros*/
-  .form-contain__input {
+  .form-contain__contain {
     width: 100%;
     height: none;
   }
-  .form {
+  .form-contain__input-label {
+    width: 100%;
+    height: none;
+  }
+  .form-contain {
+    width: 90%;
+    height: none;
     margin: 0;
   }
 }

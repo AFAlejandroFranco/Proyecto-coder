@@ -78,13 +78,13 @@
     }
 
     /*trabaja con nosotros*/
-    .form {
+    .form-contain {
         @include medidas(auto, auto);
         
         flex-direction: column-reverse;
     }
 
-    .form-contain__input {
+    .form-contain__input-label {
         @include medidas(500px, none);
 
         margin-top: 15px;
@@ -131,9 +131,9 @@
     .oferta-tercera {
         div {
 
-            color: #000;
+            color: #0a143f;
             font-weight: 800;
-            bottom: 25%;
+            bottom: 10%;
         }
     }
 
@@ -159,12 +159,17 @@
 
     /*trabaja con nosotros*/
 
-    .form-contain__input {
+    .form-contain__contain {
         @include medidas(100%, none);
         
     }
 
-    .form {
+    .form-contain__input-label{
+        @include medidas(100%, none);
+    }
+
+    .form-contain {
+        @include medidas(90%, none);
         margin: map-get($align-medidas, cero );
     }
 
